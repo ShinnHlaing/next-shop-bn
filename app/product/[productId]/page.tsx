@@ -1,11 +1,7 @@
 import React from "react";
-
-async function ProductId({
-  params,
-}: {
-  params: Promise<{ productId: string }>;
-}) {
-  const { productId } = await params;
+//using pageprops
+async function ProductId(props: PageProps<"/product/[productId]">) {
+  const { productId } = await props.params;
   return <div>ProductId - {productId}</div>;
 }
 
