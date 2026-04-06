@@ -10,7 +10,7 @@ import React from "react";
 async function ProductDetailLayout(props: LayoutProps<"/product/[productId]">) {
   const { productId } = await props.params;
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-pink-900">
+    <div className="mx-auto flex min-h-screen flex-col items-center justify-center bg-pink-900">
       <h1>Product Detail Header</h1>
       <h3> ProductId - {productId}</h3>
       {props.children}
