@@ -6,12 +6,12 @@ async function Docs({ params }: { params: Promise<{ slug: string[] }> }) {
     <>
       <h1>
         Docs Page -
-        {slug.length === 2 ? (
+        {slug?.length >= 2 ? (
           <p>
             Title - {slug[0]} & Subtitle - {slug[1]}
           </p>
         ) : (
-          <p>Title - {slug[0]}</p>
+          slug?.length === 1 && <p>Title - {slug[0]}</p>
         )}
       </h1>
     </>
